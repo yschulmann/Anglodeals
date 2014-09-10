@@ -1,0 +1,211 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage.master.cs" Inherits="MasterPage" %>
+
+<%@ Register Src="~/Controls/PrintableMenu.ascx" TagPrefix="PM" TagName="PrintableMenu" %>
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>deals</title>
+
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="author" content="drvvv@drvvv.info" /> 
+    <meta name="google-site-verification" content="ubY7Y4_ZKqK-8gqpmv5w9LbZOLBXU8Q9yHcHZqewT9w" />
+    <link rel="shortcut icon" href="images/favicon.ico" />
+    <asp:Literal ID="LiteralSeo" runat="server" Mode="PassThrough"></asp:Literal>
+    <script charset="utf-8" type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js"></script>
+    <script src="js/jquery.newsticker.pack.js" type="text/javascript"></script>
+    <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+    
+    <link rel="stylesheet" href="css/main.css">
+    <script src="js/vendor/modernizr-2.6.2.min.js"></script>
+    <script src="AllPopus.js"></script>
+    <asp:ContentPlaceHolder id="ContentPlaceHolderHead" runat="server">
+    </asp:ContentPlaceHolder>
+    <asp:Localize ID="LocalizeGoogleAnalytics" runat="server" Text="<%$ Resources:Resource, GoogleAnalytics %>"></asp:Localize>  
+</head>
+<body>
+    <header>
+
+        
+
+    <form id="form1" runat="server" defaultbutton="LinkButtonSearch">
+    <ajaxToolkit:ToolkitScriptManager EnablePartialRendering="true" runat="server" ID="ScriptManager1" />
+    
+    <div id="brand">
+        <asp:Panel ID="PanelPopUp" runat="server" visible="false">
+        <div id="PopUp" class="PopUpBackground" runat="server">
+        </div>
+        <div class="PopUp">
+            <asp:LinkButton ID="LinkButton2" runat="server" onclick="LinkButton1_Click" CssClass="X"></asp:LinkButton>
+            <asp:TextBox ID="TextBoxEmailPopUp" runat="server" ValidationGroup="MailingListPopUp"></asp:TextBox>
+            <asp:LinkButton ID="LinkButton3" runat="server" 
+                ValidationGroup="MailingListPopUp" CssClass="Sending" onclick="LinkButton3_Click"></asp:LinkButton>
+            <br />
+            <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" Text="Invalid email address" ControlToValidate="TextBoxEmailPopUp" ForeColor="#FFFFFF" Display="Dynamic" ValidationGroup="MailingListPopUp" CssClass="msg" />
+            <asp:RegularExpressionValidator ID="RegularExpressionValidator2" runat="server" Text="Invalid email address" CssClass="Error" ControlToValidate="TextBoxEmailPopUp" ValidationExpression="\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*" Display="Dynamic" ValidationGroup="MailingListPopUp"/>
+            <asp:LinkButton ID="LinkButton1" runat="server" onclick="LinkButton1_Click" CssClass="later" Text="<%$ Resources:Resource, PopUpNoThanks %>"></asp:LinkButton> 
+        </div>
+        </asp:Panel>
+        
+       
+            
+    <div class="container">
+        <div id="logo">
+        <asp:HyperLink ID="HyperLink2" runat="server" CssClass="logo" ImageUrl="~/img/logo.png" NavigateUrl="~/" alt="ANGLO Deals Logo" title="Anglo Deals - Special. Smart. Eazy."></asp:HyperLink>
+         
+       
+        </div>
+
+        <div class="user-menu">
+            <div class="dropdown"><asp:Label ID="Label2" runat="server" Text="<%$ Resources:Resource, SignUp %>" /><span class="arrow"></span>
+                
+                    <input type="email" <asp:TextBox ID="TextBoxMailingList" runat="server" CausesValidation="true" placeholder="<%$ Resources:Resource, EnterEmail %>" onfocus="if (this.value == 'Enter email address' ||this.value == 'Saisir Votre adresse email') this.value = '';" ValidationGroup="MailingList"></asp:TextBox>
+                    <input type="submit" <asp:LinkButton ID="LinkButton4" runat="server" CssClass="send" 
+                ValidationGroup="MailingList" onclick="LinkButton1_Click1" ></asp:LinkButton>
+                
+            </div><!-- dropdown -->
+        </div><!-- user-menu -->
+
+        
+                 <div id="MenuTop1">
+                 <div id="links">
+                     <div id="action-bar">
+                         <nav class="top-menu">
+                   <ul>  <asp:Repeater ID="RepeaterMenuPages" runat="server">
+                        <ItemTemplate>   
+                
+                    <li><asp:HyperLink ID="HyperLink1" runat="server" Text='<%# Eval("TitlePage") %>' NavigateUrl='<%#"~/ContentPage.aspx?page="+ Eval("ID")  %>'>   </asp:HyperLink></li>
+                    </ItemTemplate>
+                     </asp:Repeater>        
+                    <li> <asp:HyperLink ID="HyperLink3" runat="server" NavigateUrl="~/ContactUs.aspx" Text="<%$ Resources:Resource, ContactUs %>" /></li>
+                    <li><a class="f" title="Joine with us in facebook" href="#"><i class="fa fa-facebook"></i></a></li>
+                </ul>
+                     
+            </nav><!-- top-menu -->
+            <div class="search">
+                <div id="Search">
+                    
+                    <div class="input-wrap">
+                    <asp:TextBox ID="TextBoxSearch" runat="server" placeholder="<%$ Resources:Resource, TextBoxSearch %>" OnTextChanged="Search_Click" onfocus="if (this.value == 'Search all Deals and Coupons' || this.value == 'Rechercher tous les Deals et Coupons' || this.value == 'חפש בכל הדילים והקופונים') this.value = '';" ValidationGroup="Search"></asp:TextBox>
+                    <asp:LinkButton ID="LinkButtonSearch" runat="server" CssClass="send" onclick="Search_Click" ValidationGroup="Search"></asp:LinkButton>
+                    </div><!-- input-wrap -->
+                    <label for="s"><asp:Label ID="LabelSearch" runat="server" Text="<%$ Resources:Resource, LabelSearch %>" /></label>
+                         
+            </div>
+           </div><!-- search -->
+                         </div>
+                     </div>
+        </div><!-- action-bar -->
+    </div><!-- container -->
+    </div><!-- brand -->
+       <!-- <div id="MenuSide">
+            <div class="NewsBox">
+                <asp:Image ID="Image3" runat="server" ImageUrl="~/images/NewsBox.png" />
+                <asp:Repeater ID="RepeaterNewsChanges" runat="server">
+                <HeaderTemplate><ul></HeaderTemplate>
+                <ItemTemplate>
+                    <li><asp:Literal ID="Literal2" runat="server" Mode="PassThrough" Text='<%# Eval("Subject") %>'></asp:Literal></li>
+                </ItemTemplate>
+                <FooterTemplate></ul></FooterTemplate>
+                </asp:Repeater>
+            </div>
+            <uc:DisplayBanners ID="DisplayBanners2" runat="server" BannersSpace="1" BannersNum="6" style="margin:9px 0; display:block;" />
+            <div class="sideBox">
+                <div class="top"> </div>
+                <div class="middle">
+                    <asp:Localize ID="Facebook" runat="server" Text="<%$ Resources:Resource, Facebook %>" />
+                </div>
+                <div class="bottom"> </div>
+            </div>
+        </div> -->
+        <div id="body">
+            <div class="container">
+    <section id="main-menus">
+            <ul class="categories">
+                <li>Sort by category:</li>
+                <li><a href="DiscountsList.aspx?Category=1" class="restaurants">Restaurants </a></li>
+                <li><a href="DiscountsList.aspx?Category=12" class="vacations">Vacations</a></li>
+                <li><a href="DiscountsList.aspx?Category=14" class="attractions">Attractions</a></li>
+                
+            </ul><!-- sortby -->
+
+            <nav class="products">
+                <a  id="DailyDeals" runat="server" ><asp:HyperLink class="l-blue" ID="HyperLink4" runat="server" NavigateUrl="~/DealsDay.aspx" Text="<%$ Resources:Resource, MenuDd %>" /></a>
+                <a href="auctions.aspx" class="green">AUCTIONS</a>
+                <a id="PRINTABLE" runat="server"><asp:HyperLink ID="HyperLink5" runat="server" NavigateUrl="~/DiscountsList.aspx" Text="<%$ Resources:Resource, MenuFp %>" class="violet"/></a>
+                <a id="CODS" runat="server" ><asp:HyperLink ID="HyperLink6" runat="server" NavigateUrl="~/OnlineCodes.aspx" Text="<%$ Resources:Resource, MenuCods %>" class="pink"/></a>
+            </nav><!-- services -->
+    </section><!-- main-menus -->
+    </div> <!-- container -->  
+               
+            <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+           
+        </div>
+        <header>
+             <footer>
+    <div id="top-footer">
+        <div class="container">
+            <div id="footer-title">
+                <h1 class="inset-text">Anglo Deals</h1>
+                <h2 class="inset-text">Special. Smart. Eazy.</h2>
+            </div>
+            
+            <nav id="footer-nav-circles">
+                <a href=""><div><div>About<br>Us</div></div></a>
+                <a href=""><div><div>Contact Us</div></div></a>
+               <a  runat="server" href="~/forum.aspx" > <div> <div>Forum</div></div></a> 
+                <a href=""><div><div><i class="fa fa-facebook"></i></div></div></a>
+            </nav>
+        </div><!-- container -->
+        <p class="clear"></p>
+    </div><!-- top-footer -->
+    <div id="bottom-footer">
+        <div class="container">
+            <div class="copyright">
+              <a href="/"><asp:Localize ID="LocalizeCopyright" runat="server" Text="<%$ Resources:Resource, Copyright %>" /></a> 
+            </div>
+            <div class="credit">
+                Constructed by: <a title="drvvv - ניהול אתרים" href="http://www.drvvv.info/">drvvv</a>, 
+                Design by <a href="http://www.toastitdesign.com">Toast it!</a>
+            </div>
+            <nav class="bootom-menu">
+                <ul>
+                    <li>
+                        <asp:Repeater ID="RepeaterFooterLinks" runat="server">
+                <ItemTemplate>
+                    <asp:HyperLink ID="HyperLink1" runat="server" Text='<%# Eval("TitlePage") %>' NavigateUrl='<%#"~/ContentPage.aspx?page=" + Eval("ID") %>'></asp:HyperLink> |
+                </ItemTemplate>
+             </asp:Repeater>
+                    </li>
+                </ul>
+            </nav>
+        </div><!-- container -->
+    </div><!-- bottom-footer   -->
+
+       
+               
+             
+            
+        </div>
+    </div>
+                 <script>
+
+                     $('.button').click(function () {
+                         $('#screen-shadow-coupons').show();
+
+                     })
+                     $('#leftImg').click(function () {
+                         $('#screen-shadow-coupons').hide();
+
+                     })
+
+                     
+
+                 </script>
+             </footer>
+    </form>
+</body>
+</html>

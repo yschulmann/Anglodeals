@@ -1,0 +1,920 @@
+﻿*
+{
+	margin:0;
+	padding:0;
+}
+body 
+{
+    color:#3d3c3c;
+    direction:rtl;
+    font-family:Trebuchet,Helvetica,Arial;
+    font-size:12px;
+    background:url("../../images/background.jpg") no-repeat scroll center 0 #9BDAFD;
+}
+a 
+{
+    text-decoration:none;
+}
+img[src='']
+{
+	display:none;
+}
+#wrap
+{
+	width:1059px;
+	margin:0 auto 12px;
+	height:600px;
+}
+#wrap #head
+{
+    height: 142px;
+	margin-bottom: 12px;
+	position: relative;
+}
+#wrap #head .Guide
+{
+	position: absolute;
+	left: 12px;
+	top: 95px;
+}
+#head #Search
+{
+	background: url("../../images/Zebra/SearchBac.png") no-repeat scroll left top transparent;
+	float: left;
+	height: 102px;
+	padding: 0 30px;
+	width: 378px;
+}
+#head #Search input[type=text]
+{
+	background: none repeat scroll 0 0 transparent;
+	border: medium none;
+	color: #AB89A0;
+	font-size: 15px;
+	height: 50px;
+	padding: 0 9px;
+	width: 300px;
+}
+#head #Search .send
+{
+	float: left;
+	height: 50px;
+	width: 60px;
+}
+#head #Search span
+{
+	color: #A04277;
+	display: block;
+	font-size: 13px;
+	font-style: italic;
+	padding: 0 9px;
+}
+#head .logo
+{
+    background: url("../../images/Zebra/logo.png") no-repeat scroll 0 0 transparent;
+	float: right;
+	height: 142px;
+	width: 235px;
+}
+#MenuTop
+{
+    background: url("../../images/MenuBac.png") no-repeat scroll 0 bottom transparent;
+	height: 53px;
+	width: 100%;
+}
+#MenuTop ul
+{
+	margin-right:24px;
+}
+#MenuTop li
+{
+	display: inline;
+}
+#MenuTop li a
+{
+    background: url("../../images/Tab.png") no-repeat scroll 0 top transparent;
+	color: #8EAB3A;
+	float: right;
+	font-size: 12px;
+	font-weight: bold;
+	height: 39px;
+	line-height: 120%;
+	margin: 0 6px;
+	padding-top: 6px;
+	text-align: center;
+	text-transform: uppercase;
+	width: 125px;
+	font-family:Helvetica;
+}
+#MenuTop li.Active#ctl00_DailyDeals a
+{
+	color: #57750F;
+}
+#MenuTop li.Active#ctl00_PRINTABLE a
+{
+	color: #2D67A4;
+}
+#MenuTop li.Active#ctl00_FORUM a
+{
+	color: #8B2E69;
+}
+#MenuTop li a span
+{
+	display:block;
+	font-size:18px;
+}
+#MenuTop li a:hover, #MenuTop li.Active a, #MenuTop li.Active a:hover
+{
+    background: url("../../images/TabB.png") no-repeat scroll 0 top transparent;
+	height: 41px;
+	position: relative;
+	top: -1px;
+	z-index: 1;
+}
+#MenuTop li.Active a, #MenuTop li.Active a:hover
+{
+	color: #2C74BD;
+}
+#MenuTop #links
+{
+	color: #7B7B7B;
+	float: left;
+	font-size: 13px;
+	margin: 18px 9px 0;
+}
+#MenuTop #links a
+{
+	color:#1C6CBD;
+}
+#wrap #MenuSide
+{
+	float: left;
+	margin-right: 12px;
+	min-height: 700px;
+	padding-top: 30px;
+	width: 238px;
+}
+#wrap #MenuSide ul
+{
+	list-style-type:none;
+}
+#wrap #MenuSide ul li
+{
+	
+}
+#wrap #MenuSide ul li a
+{
+    color: #356506;
+    display: block;
+    font-size: 13px;
+    line-height: 24px;
+    padding: 6px 6px;
+    background: url("../../images/SubMenuBottom.jpg") repeat-x scroll 0 0 #BAE651;
+   
+}
+#wrap #MenuSide ul li.top a
+{
+	background-image:none;
+	font-weight:bold;
+}
+#wrap #MenuSide ul li a:hover, #wrap #MenuSide ul li.Active a
+{
+	background-color:#CBF27B;
+}
+#wrap #MenuSide ul li a span
+{
+	float:left;
+	width:70px;
+	margin-right:3px;
+}
+#wrap #MenuSide ul li a .img
+{
+    background-repeat: no-repeat;
+	float: right;
+	height: 35px;
+	margin-left: 9px;
+	margin-top: -6px;
+	vertical-align: middle;
+	width: 26px;
+}
+.sideBox
+{
+	margin-top:12px;
+}
+.sideBox .top
+{
+    background: url("../../images/sideBoxtop.png") no-repeat scroll 0 0 transparent;
+    height:8px;
+}
+.sideBox .middle
+{
+	background: url("../../images/sideBoxmiddle.png") repeat-y scroll 0 0 transparent;
+    min-height: 80px;
+    padding: 3px 0;
+    text-align: center;
+}
+.sideBox .bottom
+{
+    height:5px;
+    background: url("../../images/sideBoxbottom.png") no-repeat scroll 0 0 transparent;
+}
+#wrap #body
+{
+	min-height: 700px;
+	width:809px;
+	float:left;
+}
+#body hr
+{
+	border-color: #D9F8B4 White #BFF48C;
+	border-style: solid;
+	border-width: 1px 0;
+	clear: both;
+}
+.CouponItem
+{
+    background: url("../../images/CouponBackground.jpg") repeat-x scroll 0 0 transparent;
+    height: 175px;
+    padding: 15px 15px 0;
+    position: relative;
+}
+.CouponItem .img
+{ 
+	float: right;
+	height: 145px;
+	margin-left: 15px;
+	width: 175px;
+	text-align:center;
+}
+.CouponItem .img .CouponImg
+{ 
+	border: 1px solid #8C8E91;
+	height: 145px;
+	max-width: 175px;
+}
+.CouponItem .ribbon
+{
+    background: url("../../images/Zebra/CouponPurple_ribbon.png") no-repeat scroll 0 0 transparent;
+    bottom: 12px;
+    height: 36px;
+    right: -7px;
+    position: absolute;
+    width: 128px;
+}
+.CouponItem .ribbon span
+{
+	color: #FFFFFF;
+	display: block;
+	font-family: helvetica;
+	font-size: 14px;
+	padding: 12px 12px 0;
+	text-align: left;
+}
+.CouponItem h3, .CouponItem h3 a
+{
+	font-size: 16px;
+	margin-bottom: 20px;
+	min-height: 32px;
+	color:#3D3C3C;
+}
+.CouponItem .FinePrint
+{
+	font-size:12px;
+	color:#4f6e1a;
+	font-weight:bold;
+}
+.CouponItem p
+{
+	font-size:12px;
+	color:#3d3c3c;
+}
+.CouponItem .ShareDeal
+{
+	bottom: 10px;
+	color: #6B6C6D;
+	font-size: 24px;
+	line-height: 33px;
+	margin-top: 3px;
+	position: absolute;
+	left: 240px;
+	text-align: left;
+	width: 360px;
+}
+.CouponItem .ShareDeal img
+{
+	float: right;
+	vertical-align: middle;
+	height:33px;
+}
+.CouponItem .Detals
+{
+    background: url("../../images/CouponBackgroundDetals.png") no-repeat scroll 0 bottom transparent;
+    float: left;
+    height: 150px;
+    width: 209px;
+    position:relative;
+    margin-right:12px;
+}
+.CouponItem .Detals .price
+{
+	font-size:32px;
+	color:#8d1e5c;
+	font-weight:bold;
+	text-align:center;
+}
+.CouponItem .Detals .priceDetals
+{
+	color: #696467;
+	float: right;
+	height: 40px;
+	margin: 3px 4px 6px;
+	text-align: center;
+	width: 60px;
+}
+.CouponItem .Detals .priceDetals span
+{
+	font-size:18px;
+	font-weight:bold;
+	display: block;
+}
+.CouponItem .Guide
+{
+	float: left;
+	font-size: 12px;
+	text-decoration: underline;
+}
+.Content
+{
+	padding:25px;
+	line-height: 160%;
+	background-color: #FFFFFF;
+	font-size: 12px;
+}
+.Content h2, .Content h2 a
+{
+	color: #10518F;
+	font-size: 18px;
+	margin-bottom: 18px;
+}
+.Content p
+{
+	font-size: 14px;
+	margin-bottom: 16px;
+}
+.Content li
+{
+	margin:12px 40px;
+}
+.Content h4
+{
+	margin:3px 0 9px;
+	color:#10518F;
+	font-size: 16px;
+}
+#ListHead
+{
+	background-color:#E7F4C2;
+	height:72px;	
+}
+#ListHead.Search
+{
+	height: 100px;
+	padding-top: 6px;
+}
+#ListHead h1
+{
+	font-size:18px;
+	margin:0 12px 6px;
+	color:#2C74BD;
+}
+#ListHead > div
+{
+	float: right;
+	margin: 0 12px;
+	padding: 6px 12px 0;
+	width: 200px;
+}
+#ListHead > div#MailingList
+{
+    background: url("../../images/Zebra/MailingListButton.png") no-repeat scroll center 35px #C4EE6B;
+	float: left;
+	height: 100%;
+	margin: 0;
+	width: 270px;
+}
+#ListHead span
+{
+	color: #93357C;
+	display: block;
+	font-size: 14px;
+	font-weight: bold;
+}
+#ListHead select 
+{
+	font-size: 14px;
+	margin: 6px 0;
+	padding: 6px;
+	width: 100%;
+	-webkit-appearance: none;
+}
+#ListHead input[type=text]
+{
+	background: none repeat scroll 0 0 transparent;
+	border: medium none;
+	margin-top: 12px;
+	padding: 6px;
+	width: 215px;
+}
+#ListHead .send
+{
+	padding: 12px 21px;
+}
+.time
+{
+    background: url("../../images/CouponBackgroundTime.png") no-repeat scroll 0 0 transparent;
+    clear: both;
+    color: #4F6E1A;
+    font-size: 20px;
+    height: 30px;
+    letter-spacing: 2.4px;
+    margin: 0 auto;
+    padding-top: 2px;
+    text-align: center;
+    width: 142px;
+}
+.CouponItem .DealButton
+{
+	display: block;
+    margin: 12px auto 0;
+    background: url("../../images/Zebra/view_deal_button.png") no-repeat scroll 0 0 transparent;
+	width: 158px;
+	height: 29px;
+}
+.Content input[type=text],.Content textarea
+{
+    margin-bottom: 18px;
+    padding: 3px;
+    width: 350px;
+}
+.Content label
+{
+    float: right;
+    font-weight: bold;
+    line-height: 24px;
+    margin-right: 64px;
+    padding-left: 12px;
+    text-align: left;
+    width: 60px;
+}
+#PrintableHead
+{
+	background-color:#FFFFFF;
+	padding-bottom:12px;
+}
+#PrintableHead ul.TabsCategories
+{
+	display:block;
+	height:29px;
+	list-style-type:none;
+	padding: 18px 24px 0;
+}
+#PrintableHead .TabsCategories li a
+{
+	background: url("../../images/tabGrey.png") no-repeat scroll 0 top transparent;
+	color: #89898A;
+	float: right;
+	font-size: 14px;
+	height: 24px;
+	margin: 0 3px;
+	padding-top: 5px;
+	text-align: center;
+	width: 101px;
+}
+#PrintableHead .TabsCategories li a[disabled], #PrintableHead .TabsCategories li a:hover
+{
+	background: url("../../images/tabLightBlue.png") no-repeat scroll 0 1px transparent;
+	color: #1C6CBD;
+}
+#PrintableHead .SubCategories
+{
+	display: block;
+}
+#PrintableHead .SubCategories label
+{
+	padding:0 6px;
+}
+#PrintableHead .CheckBoxMehadrin
+{
+	margin-right:24px;
+}
+.BlueBox
+{
+	color:#1C6CBD;
+	background-color: #DAF0FD;
+	clear: both;
+	margin: 0 6px 12px;
+	padding: 24px;
+	-webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+    behavior: url(/PIE.htc);
+}
+.BlueBox label
+{
+	font-size:14px;
+	font-weight:bold;
+	margin-left:6px;
+}
+#body .BlueBox hr
+{
+	border-color: #99C8E3;
+	border-width: 1px 0;
+	margin: 12px 0;
+}
+.BlueBox select
+{
+	margin-left: 24px;
+	padding: 6px;
+	width: 180px;
+}
+.PrintableList
+{
+}
+.PrintableListItem
+{
+	/*background-color: #FFFFFF;
+	float: right;
+	margin: 12px 6px 6px;
+	width: 190px;
+	padding-bottom: 9px;*/
+}
+.PrintableListItem .img
+{
+	color: #475D74;
+	font-size: 13px;
+	font-weight: bold;
+	position: relative;
+	text-align: center;
+	height: 110px;
+}
+.PrintableListItem.Featured .img:before
+{
+	background: url("../../images/features.png") no-repeat scroll left top transparent;
+	content: "";
+	display: block;
+	height: 68px;
+	left: -8px;
+	position: absolute;
+	top: -6px;
+	width: 68px;
+}
+.PrintableListItem .img img
+{
+	height: 76px;
+	display:block;
+	margin:0 auto 4px;
+	max-width: 160px;
+}
+.PrintableListItem h3, .PrintableListItem h3 a
+{
+	color: #2C74BD;
+    height: 18px;
+    margin: 3px 0 6px;
+    overflow: hidden;
+    text-align: center;
+}
+.PrintableListItem .Discount
+{
+
+	border-radius: 7px 7px 7px 7px;
+	color: #93357C;
+	margin: 3px auto;
+	text-align: center;
+	width: 180px;
+	-webkit-border-radius: 7px;
+    -moz-border-radius: 7px;
+    behavior: url(/PIE.htc);
+}
+.PrintableListItem .Discount .title
+{
+	border: 1px dashed #AEAAAA;
+	display: block;
+	font-size: 14px;
+	height: 24px;
+	line-height: 24px;
+	margin: 6px;
+	overflow: hidden;
+}
+.PrintableListItem .Discount .mor
+{
+	display: block;
+	font-size: 12px;
+	font-style: italic;
+	height: 12px;
+}
+.PrintableListItem .ViewAll
+{
+    background: url("../../images/ButtonBlue.png") no-repeat scroll 0 0 transparent;
+	color: #FFFFFF;
+	display: block;
+	font-size: 14px;
+	font-weight: bold;
+	height: 26px;
+	line-height: 26px;
+	margin: 0 auto 3px;
+	text-align: center;
+	width: 119px;
+}
+#PrintableCoupon
+{
+	background-color: #FFFFFF;
+	min-height:300px;
+	padding:12px;
+}
+#PrintableCoupon .formCoupon
+{
+	border: 3px solid #368CDA;
+	float: left;
+	height: 150px;
+	margin: 0 12px;
+	width: 400px;
+    border-radius: 7px;
+	-webkit-border-radius: 7px;
+    -moz-border-radius: 7px;
+    behavior: url(/PIE.htc);
+}
+#PrintableCoupon #Information
+{
+	margin:0 12px 48px;
+	color:#4C6278;
+	font-size:12px;
+	line-height: 150%;
+}
+#PrintableCoupon #Information a
+{
+	text-decoration:underline;
+}
+#PrintableCoupon #Information .ImageLogo
+{
+	height:100px;
+	margin:0 24px 9px 0;
+}
+#PrintableCoupon #Information h1
+{
+	font-size:14px;
+}
+#PrintableCoupon #Information span
+{
+	font-weight:bold;
+}
+.PrintableCouponListItem
+{
+	position: relative;
+	clear: both;
+	border: 1px dashed #A3A8AA;
+	margin-top: 28px;
+	padding:12px 18px;
+	-webkit-border-radius: 7px;
+    -moz-border-radius: 7px;
+    border-radius: 7px;
+    behavior: url(/PIE.htc);
+}
+.PrintableCouponListItem:before
+{
+    background: url("../../images/Scissors.png") no-repeat scroll 0 0 transparent;
+	content: "";
+	display: block;
+	height: 22px;
+	right: 6px;
+	position: absolute;
+	top: -22px;
+	width: 30px;
+}
+.PrintableCouponListItem h3
+{
+	color:#DA2B16;
+	font-size:16px;
+	margin-bottom:6px;
+}
+.PrintableCouponListItem p
+{
+	color: #1C6CBD;
+	line-height:130%;
+	width: 580px;
+}
+.PrintableCouponListItem .side
+{
+	float: left;
+	font-size: 11px;
+	height: 100%;
+	text-align: center;
+	width: 150px;
+}
+.PrintableListEmpty
+{
+	text-align:center;
+	padding:12px;
+	font-size:14px;
+	font-weight:bold;
+	background-color:White;
+}
+.ButtonBlue
+{
+    background: url("../../images/ButtonBlue.png") no-repeat scroll 0 0 transparent;
+	color: #FFFFFF;
+	display: block;
+	font-size: 13px;
+	font-weight: bold;
+	height: 26px;
+	line-height: 26px;
+	margin: 6px auto;
+	text-align: center;
+	width: 119px;
+}
+#wrap #footer
+{
+   clear: both;
+	color: #10518F;
+	font-size: 14px;
+	height: 20px;
+	padding: 12px;
+	position: relative;
+	text-align: center;
+	width: 800px;
+}
+#wrap #footer a
+{
+	color:#10518f;
+}
+.PopUpBackground
+{
+    background-color: black;
+	height: 100%;
+	right: 0;
+	opacity: 0.6;
+	position: fixed;
+	top: 0;
+	width: 100%;
+	z-index: 90;
+	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=60)"; /* IE8 */
+	filter: alpha(opacity=60); /* IE 5-7 */
+}
+.PopUp
+{
+    background: url("../../images/PopUpBackground/PopUpZebra.png") no-repeat scroll 0 0 transparent;
+	height: 387px;
+	margin: 60px 250px;
+	position: fixed;
+	width: 554px;
+	z-index: 100;
+}
+.PopUp .X
+{
+	display:block;
+	float:right;
+	height:25px;
+	width:25px;
+}
+.PopUp input[type=text]
+{
+	background: none repeat scroll 0 0 transparent;
+	border: medium none;
+	margin: 235px 30px 0 0;
+	width: 195px;
+	height:20px;
+}
+.PopUp .Sending
+{
+	height: 40px;
+	margin-top: 230px;
+	position: absolute;
+	width: 60px;
+}
+.PopUp .later
+{
+	color: #2776C9;
+	display: block;
+	font-size: 14px;
+	margin: 60px 80px 0;
+	text-decoration: underline;
+}
+.PopUp .Error
+{
+	color: White !important;
+	font-size: 10px;
+	line-height: 16px;
+	padding: 0 60px;
+}
+.NewsBox
+{
+    background: url("../../images/NewsBoxbotttom.png") no-repeat scroll 0 bottom transparent;
+    padding-bottom:15px;
+    margin: 9px 0;
+}
+.NewsBox ul
+{
+    background: url("../../images/NewsBoxpixel.png") repeat-y scroll 0 0 transparent;
+    display:block;
+    list-style-type:none;
+    min-height: 200px;
+    font-size: 13px;
+}
+.NewsBox ul li
+{
+	padding: 9px 12px 3px;
+    display:none;
+    line-height:130%;
+}
+.NewsBox ul li:First-child
+{
+    display:inline;
+}
+.NewsBox ul li p
+{
+	padding:0 12px 6px;
+}
+.GuideList
+{
+	width:100%;
+}
+.GuideList td
+{
+	padding: 24px 9px;
+	text-align: center;
+	width: 33%;
+}
+.GuideList td img
+{
+	border:none;
+	height: 45px;
+}
+.GuideList td h3
+{
+	margin:3px 0 6px;
+	text-decoration:underline;
+}
+body.Newsletter
+{
+	background-color:#ccecfd;	
+}
+.float
+{
+	float: left;
+}
+.float2
+{
+	float: right;
+}
+
+.ForumMsgTitle th
+{
+	background-color:#2C77C1;
+    color:white;
+    padding:6px;
+}
+.ForumMsg td
+{
+	border:1px solid #B4E141;
+    text-align:center;
+    vertical-align:middle;
+    padding:6px;
+    width:20%;
+}
+        .ForumMsg td.Title
+        {
+            text-align:right;
+            width:40%;
+        }
+	.ForumMsg td a
+	{
+		color: #1C6CBD;
+		display: block;
+		font-size: 14px;
+		font-weight: bold;
+		margin: 6px 0 3px;
+		text-decoration: underline;
+	}
+#AddComment
+{
+    line-height:38px;
+    margin-top:12px;
+}
+
+.ForumMsg
+{
+	margin:6px 12px;
+}
+.ForumMsg h3
+{
+    color: #00448B;
+    font-size: 22px;
+    margin-bottom: 3px;
+}
+.ForumMsg h5
+{
+    border-bottom: 1px solid #F2F2F2;
+    font-size: 12px;
+    font-weight: normal;
+    margin-bottom: 3px;
+    padding: 3px 0;
+}

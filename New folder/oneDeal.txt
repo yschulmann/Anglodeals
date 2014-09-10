@@ -1,0 +1,268 @@
+﻿.slide {
+  position: relative;
+  display: inline-block;
+  width: 510px;
+  margin: 0 30px 0 0;
+  border: 2px solid #FFF;
+  -webkit-box-shadow: 0 0 5px 1px rgba(0,0,0,.5);
+   -moz-box-shadow: 0 0 5px 1px rgba(0,0,0,.5);
+    -ms-box-shadow: 0 0 5px 1px rgba(0,0,0,.5);
+     -o-box-shadow: 0 0 5px 1px rgba(0,0,0,.5);
+        box-shadow: 0 0 5px 1px rgba(0,0,0,.5);
+}
+.slide:last-child {
+  margin: 0;
+}
+.slide .header {
+  margin: -2px;
+}
+.slide .header .left {
+  float: left;
+  width: 342px;
+  font-size: 24px;
+  font-weight: bold;
+  line-height: 55px;
+  color: #fff;
+}
+.slide .header .right a {
+  float: right;
+  width: 149px;
+  border-left: 1px solid #fff;
+  font-size: 20px;
+  line-height: 55px;
+  text-align: center;
+  color: #fff;
+}
+.slide figure {
+  clear: both;
+  position: relative;
+}
+.slide figure a {
+  text-decoration: none;
+  color: #fff;
+}
+.slide figure .bottom {
+  position: absolute;
+  bottom: 0;
+  padding: 0;
+  background-color: rgba(0,0,0,.75);
+  width: 100%;
+}
+figure .bottom .remain {
+  position: absolute;
+  top: -36px;
+  right: 0;
+  width: 124px;
+  color: #000;
+  font-weight: bold;
+  line-height: 34px;
+  text-align: center;
+  background-color: #fff;
+  border: 1px solid #c1c1bf;
+}
+figure .bottom h1 {
+  font-size: 30px;
+  line-height: 30px;
+  padding: 0;
+  margin: 10px 15px;
+}
+figure .bottom h1 .worth {
+  margin-left: 15px;
+  font-size: 20px;
+  font-weight: normal;
+  color: rgba(255,255,255,.5);
+  text-decoration: line-through;
+}
+figure .bottom .description {
+  width: 360px;
+  font-size: 18px;
+  line-height: 25px;
+  margin: 0 15px 15px;
+}
+figure .bottom .location {
+  position: absolute;
+  bottom: 0;right: 0;
+  padding: 0 15px 10px 20px;
+  font-size: 13px;
+  line-height: 19px;
+  margin: 2px;
+  background: transparent url(../img/ADsprites.png) 0 -195px no-repeat;
+}
+.deals .header .left:before,
+.auctions .header .left:before,
+.coupons .header .left:before,
+.codes .header .left:before,
+.deals .header .right a:before,
+.auctions .header .right a:before,
+.coupons .header .right a:before,
+.codes .header .right a:before {
+  display: inline-block;
+  width: 100%;
+}
+.deals .header .left:before,
+.auctions .header .left:before,
+.coupons .header .left:before,
+.codes .header .left:before {
+  padding-left: 22px;
+}
+.deals .header .left:before{
+  background-color: #00B7F1;
+  content: "DEALS";  
+}
+.deals .header .right a:before{
+  background-color: #2EC4F4;
+  content: "All Deals ›";
+}
+.auctions .header .left:before{
+  background-color: #44A642;
+  content: "AUCTIONS"
+}
+.auctions .header .right a:before{
+  background-color: #66B664;
+  content: "All Auction ›";
+}
+.coupons .header .left:before{
+  background-color: #8466A3;
+  content: "COUPONS";
+}
+.coupons .header .right a:before{
+  background-color: #69458F;
+  content: "All Coupons ›";
+}
+.codes .header .left:before{
+  background-color: #EE4181;
+  content: "CODES";
+}
+.codes .header .right a:before{
+  background-color: #F16398;
+  content: "All Codes ›";
+}
+/** ---- END slide figure ----**/
+
+/*************************************************
+-----    Home slider -> slide hover
+*************************************************/
+.deals .slide-hover {
+  position: absolute;
+  top: -2px;
+  right: -2px;
+  left: -2px;
+  bottom: -2px;
+  color: #fff;
+  height: 0;
+  overflow: hidden;
+  -webkit-transition: all .7s ease-in-out;
+  -moz-transition: all .7s ease-in-out;
+  -ms-transition: all .7s ease-in-out;
+  -o-transition: all .7s ease-in-out;
+  transition: all .7s ease-in-out;
+}
+.deals:hover .slide-hover {
+  height: 101%;
+}
+
+.hover-header {
+  background-color: #30383a;
+  margin: -2px -2px 0;
+  padding: 0;
+  border-bottom: 1px solid #fff;
+  width: 516px;
+  /*border: 1px solid orange;*/
+}
+.hover-left,
+.hover-midel a,
+.hover-right {
+  display: inline-block;
+  margin: 0; padding: 0;
+}
+.hover-left {
+  padding-left: 22px;
+  width: 279px;
+  font-size: 24px;
+  line-height: 52px;
+  font-weight: bold;
+  color: rgba(256,256,256,.25);
+  /*border: 1px solid blue;*/
+}
+.hover-midel a {
+  color: rgba(256,256,256,.75);
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 52px;
+  width: 80px;
+  /*border: 1px solid red;*/
+}
+.hover-right {
+  color: rgba(256,256,256,.75);
+  text-align: center;
+  width: 124px;
+  border-left: 1px solid #fff;
+  /*border: 1px solid red;*/
+}
+.hover-right .location {
+  font-size: 14px;
+  line-height: 52px;
+  padding: 0 0 0 25px;
+  background: transparent url(../img/ADsprites.png) 0 -195px no-repeat;
+}
+.slide-hover figure {
+  background-color: rgba(48,56,58,.95);
+  min-height: 300px;
+  margin: 0 -2px 0;
+  padding: 0;
+  text-align: center;
+}
+.slide-hover figure h1 {
+  font-size: 33px;
+  line-height: 33px;
+  padding: 25px 0 10px; margin: 0;
+}
+.hover-worth {
+  font-size: 17px;
+  line-height: 1.5;
+  color: rgba(256,256,256,.50);
+  text-decoration: line-through;
+}
+.hover-description {
+  font-size: 17px;
+  line-height: 24px;
+  width: 50%;
+  margin:15px auto 50px;
+}
+.button {
+  font-size: 24px;
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  border-radius: 6px;
+  background-color: #4196d9;
+  *zoom: 1;
+  overflow: hidden;
+  filter: progid:DXImageTransform.Microsoft.gradient(gradientType=1, startColorstr='#2EC4F4', endColorstr='#00B7F1');
+  background-image: -webkit-linear-gradient(180deg, #2EC4F4 50%, #00B7F1 51%);
+     background-image: -moz-linear-gradient(180deg, #2EC4F4 50%, #00B7F1 51%);
+       background-image: -o-linear-gradient(180deg, #2EC4F4 50%, #00B7F1 51%);  
+          background-image: linear-gradient(180deg, #2EC4F4 50%, #00B7F1 51%);
+  line-height: 52px;
+  width: 165px;
+  margin: 15px auto;
+}
+.hover-remain {
+  display: block;
+  font-size: 18px;
+  font-weight: bold;
+  line-height: 35px;
+  width: 161px;
+  margin: 15px auto 0;
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  border-radius: 6px;
+  border: 2px solid rgba(255,255,255,0.5);
+  color: rgba(255,255,255,0.5);  
+}
+.hover-more {
+  color: rgba(255,255,255,0.5);
+  text-decoration: underline !important;
+  font-size: 15px;
+  line-height: 4.5;
+  padding: 0;
+}

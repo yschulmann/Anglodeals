@@ -1,0 +1,451 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="drillman_Anglodeals" Class="DataClassesDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="WebSettings" ConnectionString="Data Source=mssql.simplybetter.co.il,1533;Initial Catalog=drillman_Anglodeals;User ID=drillman_Sql" SettingsObjectName="System.Configuration.ConfigurationManager.ConnectionStrings" SettingsPropertyName="AnglodealsConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.CityTree" Member="CityTrees">
+    <Type Name="CityTree">
+      <Column Name="ID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="TitleDefault" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="TitleEn" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="FromID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="[Level]" Member="Level" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.CategoryTree" Member="CategoryTrees">
+    <Type Name="CategoryTree">
+      <Column Name="ID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="TitleDefault" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="TitleEn" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="FromID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="[Level]" Member="Level" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Banners" Member="Banners">
+    <Type Name="Banner">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Title" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Active" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="BeginDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="EndDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="InDate" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="Visits" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Clicks" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="MaxVisits" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="LinkFile" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="Link" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="SiteID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="BannersSpaceID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="BannersSpace_Banner" Member="BannersSpace" ThisKey="BannersSpaceID" OtherKey="ID" Type="BannersSpace" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Pages" Member="Pages">
+    <Type Name="Page">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="TitlePage" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Description" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="ContentPage" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="SiteID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Active" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="ActiveMenu" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="ImageName" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Keywords" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="Priority" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.BannersSpace" Member="BannersSpaces">
+    <Type Name="BannersSpace">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Title" Type="System.String" DbType="NVarChar(255) NOT NULL" CanBeNull="false" />
+      <Column Name="Width" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="Height" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Association Name="BannersSpace_Banner" Member="Banners" ThisKey="ID" OtherKey="BannersSpaceID" Type="Banner" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Businesses" Member="Businesses">
+    <Type Name="Business">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="TitleDefault" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="TitleEn" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="SubjectDefault" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="SubjectEn" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="DescriptionDefault" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="DescriptionEn" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="ImgName" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Email" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="AddressDefault" Type="System.String" DbType="NVarChar(512)" CanBeNull="true" />
+      <Column Name="AddressEn" Type="System.String" DbType="NVarChar(512)" CanBeNull="true" />
+      <Column Name="Phone" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="LinkSite" Type="System.String" DbType="NVarChar(256)" CanBeNull="true" />
+      <Column Name="InDate" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="Priority" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="CategoryID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="CityID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Tags" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="EmailManager" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="ShowForm" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="Visits" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="kosherDefault" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="kosherEn" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="TitleFr" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="SubjectFr" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="DescriptionFr" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="AddressFr" Type="System.String" DbType="NVarChar(512)" CanBeNull="true" />
+      <Column Name="kosherFr" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Association Name="Business_Discount" Member="Discounts" ThisKey="ID" OtherKey="BusinessID" Type="Discount" />
+      <Association Name="Category_Business" Member="Category" ThisKey="CategoryID" OtherKey="ID" Type="Category" IsForeignKey="true" />
+      <Association Name="City_Business" Member="City" ThisKey="CityID" OtherKey="ID" Type="City" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Categories" Member="Categories">
+    <Type Name="Category">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="TitleDefault" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="TitleEn" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="SubjectDefault" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="SubjectEn" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="Image" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Priority" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="FromID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="TitleFr" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="SubjectFr" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Association Name="Category_Business" Member="Businesses" ThisKey="ID" OtherKey="CategoryID" Type="Business" />
+      <Association Name="Category_Category" Member="Categories" ThisKey="ID" OtherKey="FromID" Type="Category" />
+      <Association Name="Category_Coupon" Member="Coupons" ThisKey="ID" OtherKey="CategoryID" Type="Coupon" />
+      <Association Name="Category_MailingList" Member="MailingLists" ThisKey="ID" OtherKey="CategoryID" Type="MailingList" />
+      <Association Name="Category_OnLineCode" Member="OnLineCodes" ThisKey="ID" OtherKey="CategoryID" Type="OnlineCode" />
+      <Association Name="Category_Category" Member="Category1" ThisKey="FromID" OtherKey="ID" Type="Category" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Cities" Member="Cities">
+    <Type Name="City">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="TitleDefault" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="TitleEn" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="SubjectDefault" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="SubjectEn" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="Image" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Priority" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="FromID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="TitleFr" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="SubjectFr" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Association Name="City_Business" Member="Businesses" ThisKey="ID" OtherKey="CityID" Type="Business" />
+      <Association Name="City_City" Member="Cities" ThisKey="ID" OtherKey="FromID" Type="City" />
+      <Association Name="City_Coupon" Member="Coupons" ThisKey="ID" OtherKey="CityID" Type="Coupon" />
+      <Association Name="City_OnLineCode" Member="OnLineCodes" ThisKey="ID" OtherKey="CityID" Type="OnlineCode" />
+      <Association Name="City_City" Member="City1" ThisKey="FromID" OtherKey="ID" Type="City" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Clicks" Member="Clicks">
+    <Type Name="Click">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="CouponID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="ClientID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Source" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Ip" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="InDate" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Association Name="Client_Click" Member="Client" ThisKey="ClientID" OtherKey="ID" Type="Client" IsForeignKey="true" />
+      <Association Name="Coupon_Click" Member="Coupon" ThisKey="CouponID" OtherKey="ID" Type="Coupon" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Clients" Member="Clients">
+    <Type Name="Client">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Email" Type="System.String" DbType="NVarChar(255) NOT NULL" CanBeNull="false" />
+      <Column Name="Password" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="FirstName" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="LastName" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="City" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Addres" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Telephone" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="InDate" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="LastDate" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="Manager" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Association Name="Client_Click" Member="Clicks" ThisKey="ID" OtherKey="ClientID" Type="Click" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Coupons" Member="Coupons">
+    <Type Name="Coupon">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="TitleDefault" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="TitleEn" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="SubjectDefault" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="SubjectEn" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="ImgName" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Kosher" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="Active" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="LinkToDeal" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="CategoryID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="CityID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="CouponSiteID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Price" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="OriginalPrice" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="DiscountPercentage" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Visits" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="EndDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="InDate" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="LastDate" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="Priority" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="CompareXml" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="TitleFr" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="SubjectFr" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Association Name="Coupon_Click" Member="Clicks" ThisKey="ID" OtherKey="CouponID" Type="Click" />
+      <Association Name="Category_Coupon" Member="Category" ThisKey="CategoryID" OtherKey="ID" Type="Category" IsForeignKey="true" />
+      <Association Name="City_Coupon" Member="City" ThisKey="CityID" OtherKey="ID" Type="City" IsForeignKey="true" />
+      <Association Name="CouponsSite_Coupon" Member="CouponsSite" ThisKey="CouponSiteID" OtherKey="ID" Type="CouponsSite" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.CouponsSites" Member="CouponsSites">
+    <Type Name="CouponsSite">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="TitleDefault" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="TitleEn" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="SubjectDefault" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="SubjectEn" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="LinkSite" Type="System.String" DbType="NVarChar(256)" CanBeNull="true" />
+      <Column Name="ImageName" Type="System.String" DbType="NVarChar(256)" CanBeNull="true" />
+      <Column Name="Nots" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="TitleFr" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="SubjectFr" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Association Name="CouponsSite_Coupon" Member="Coupons" ThisKey="ID" OtherKey="CouponSiteID" Type="Coupon" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Discounts" Member="Discounts">
+    <Type Name="Discount">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="BusinessID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="TitleDefault" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="TitleEn" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="SubjectDefault" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="SubjectEn" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="ImgName" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="SiteName" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Link" Type="System.String" DbType="NVarChar(256)" CanBeNull="true" />
+      <Column Name="Tags" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="DiscountType" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="DiscountDefault" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="DiscountEn" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Priority" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="InDate" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="EndDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="TitleFr" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="SubjectFr" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="DiscountFr" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Association Name="Business_Discount" Member="Business" ThisKey="BusinessID" OtherKey="ID" Type="Business" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.MailingList" Member="MailingLists">
+    <Type Name="MailingList">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Email" Type="System.String" DbType="NVarChar(255) NOT NULL" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="SiteID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Ip" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="InDate" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="CategoryID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Lang" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Kosher" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="CityID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="Category_MailingList" Member="Category" ThisKey="CategoryID" OtherKey="ID" Type="Category" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.News" Member="News">
+    <Type Name="New">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Title" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Subject" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="SiteID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Priority" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Active" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="InDate" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Messages" Member="Messages">
+    <Type Name="Message">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="FromName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Email" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Title" Type="System.String" DbType="NVarChar(512)" CanBeNull="true" />
+      <Column Name="Subject" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="FromIp" Type="System.String" DbType="NVarChar(128) NOT NULL" CanBeNull="false" />
+      <Column Name="Active" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="InDate" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="SiteID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="PageID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ManagerReply" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="FromMessagesID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Before" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="Visits" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="Message_Message" Member="Messages" ThisKey="ID" OtherKey="FromMessagesID" Type="Message" />
+      <Association Name="Message_Message" Member="Message1" ThisKey="FromMessagesID" OtherKey="ID" Type="Message" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.vAllTypes" Member="vAllTypes">
+    <Type Name="vAllType">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="BusinessID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="TitleDefault" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="TitleEn" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="TitleFr" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="SubjectDefault" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="SubjectEn" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="SubjectFr" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="ImgName" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="SiteName" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Kosher" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Active" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Link" Type="System.String" DbType="NVarChar(256)" CanBeNull="true" />
+      <Column Name="Tags" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="DiscountType" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="DiscountDefault" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="DiscountEn" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="CategoryID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="CityID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="CouponSiteID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Price" Type="System.Decimal" DbType="Decimal(19,4)" CanBeNull="true" />
+      <Column Name="OriginalPrice" Type="System.Decimal" DbType="Decimal(19,4)" CanBeNull="true" />
+      <Column Name="DiscountPercentage" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Visits" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="EndDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="InDate" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="LastDate" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="Priority" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="CompareXml" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="DiscountFr" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="type" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.vDiscounts" Member="vDiscounts">
+    <Type Name="vDiscount">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="BusinessID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="TitleDefault" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="TitleEn" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="TitleFr" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="SubjectDefault" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="SubjectEn" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="SubjectFr" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="ImgName" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="SiteName" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Kosher" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Active" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Link" Type="System.String" DbType="NVarChar(256)" CanBeNull="true" />
+      <Column Name="Tags" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="DiscountType" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="DiscountDefault" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="DiscountEn" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="CategoryID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="CityID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="CouponSiteID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Price" Type="System.Decimal" DbType="Decimal(1,1) NOT NULL" CanBeNull="false" />
+      <Column Name="OriginalPrice" Type="System.Decimal" DbType="Decimal(1,1) NOT NULL" CanBeNull="false" />
+      <Column Name="DiscountPercen" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Visits" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="EndDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="InDate" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="LastDate" Type="System.String" DbType="VarChar(1) NOT NULL" CanBeNull="false" />
+      <Column Name="Priority" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="CompareXml" Type="System.String" DbType="VarChar(1) NOT NULL" CanBeNull="false" />
+      <Column Name="DiscountFr" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="type" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.vCoupons" Member="vCoupons">
+    <Type Name="vCoupon">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="BusinessID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="TitleDefault" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="TitleEn" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="TitleFr" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="SubjectDefault" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="SubjectEn" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="SubjectFr" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="ImgName" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="SiteName" Type="System.String" DbType="VarChar(1) NOT NULL" CanBeNull="false" />
+      <Column Name="Kosher" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="Active" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="Link" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Tags" Type="System.String" DbType="VarChar(1) NOT NULL" CanBeNull="false" />
+      <Column Name="DiscountType" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="DiscountDefault" Type="System.String" DbType="VarChar(1) NOT NULL" CanBeNull="false" />
+      <Column Name="DiscountEn" Type="System.String" DbType="VarChar(1) NOT NULL" CanBeNull="false" />
+      <Column Name="CategoryID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="CityID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="CouponSiteID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Price" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="OriginalPrice" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="DiscountPercentage" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Visits" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="EndDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="InDate" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="LastDate" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="Priority" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="CompareXml" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="DiscountFr" Type="System.String" DbType="VarChar(2) NOT NULL" CanBeNull="false" />
+      <Column Name="type" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.vOnLineCodes" Member="vOnLineCodes">
+    <Type Name="vOnLineCode">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="BusinessID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="TitleDefault" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="TitleEn" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="TitleFr" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="SubjectDefault" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="SubjectEn" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="SubjectFr" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="ImgName" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="SiteName" Type="System.String" DbType="VarChar(64) NOT NULL" CanBeNull="false" />
+      <Column Name="Kosher" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="Active" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="Link" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Tags" Type="System.String" DbType="VarChar(64) NOT NULL" CanBeNull="false" />
+      <Column Name="DiscountType" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="DiscountDefault" Type="System.String" DbType="VarChar(64) NOT NULL" CanBeNull="false" />
+      <Column Name="DiscountEn" Type="System.String" DbType="VarChar(64) NOT NULL" CanBeNull="false" />
+      <Column Name="CategoryID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="CityID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="CouponSiteID" Type="System.String" DbType="VarChar(64) NOT NULL" CanBeNull="false" />
+      <Column Name="Price" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="OriginalPrice" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="DiscountPercentage" Type="System.String" DbType="VarChar(64) NOT NULL" CanBeNull="false" />
+      <Column Name="Visits" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="EndDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="InDate" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="LastDate" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="Priority" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="CompareXml" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="DiscountFr" Type="System.String" DbType="VarChar(1) NOT NULL" CanBeNull="false" />
+      <Column Name="O_Code" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="type" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.OnLineCodes" Member="OnLineCodes">
+    <Type Name="OnlineCode">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="TitleDefault" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="TitleEn" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="TitleFr" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="SubjectDefault" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="SubjectEn" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="SubjectFr" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="ImgName" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Kosher" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="Active" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="LinkToDeal" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="CategoryID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="CityID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="OnLineCodesiteID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Price" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="OriginalPrice" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="DiscountPercentage" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Visits" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="EndDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="InDate" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="LastDate" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="Priority" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="CompareXml" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="O_Code" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Association Name="Category_OnLineCode" Member="Category" ThisKey="CategoryID" OtherKey="ID" Type="Category" IsForeignKey="true" />
+      <Association Name="City_OnLineCode" Member="City" ThisKey="CityID" OtherKey="ID" Type="City" IsForeignKey="true" />
+    </Type>
+  </Table>
+</Database>

@@ -1,0 +1,47 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage.master.cs" Inherits="Manager_MasterPage" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>Anglodeals manager</title>
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div id="wrap">
+        <div id="head">
+            <asp:HyperLink ID="HyperLink11" runat="server" NavigateUrl="http://anglodeals.co.il" Target="_blank" style="float:right;">To site</asp:HyperLink>
+            <h1>Anglodeals Managment</h1>
+        </div>
+        <ul class="MainMenu">
+        <h3>Menu</h3>
+            <li><a href="Default.aspx">Home</a></li>
+            <li><asp:HyperLink ID="HyperLink13" runat="server" NavigateUrl="~/Manager/CommentManager.aspx">Forum Manager</asp:HyperLink></li>
+            <li><asp:HyperLink ID="HyperLink14" runat="server" NavigateUrl="~/Manager/CouponsManager.aspx">Coupons Manager</asp:HyperLink></li>
+            <li><asp:HyperLink ID="HyperLink3" runat="server" NavigateUrl="~/Manager/OnlineCodes.aspx">Online Code Manager</asp:HyperLink></li>
+            <li><asp:HyperLink ID="HyperLink10" runat="server" NavigateUrl="~/Manager/DiscountsManager.aspx">Discounts Manager</asp:HyperLink></li>
+            <li><asp:HyperLink ID="HyperLink12" runat="server" NavigateUrl="~/Manager/PagesManager.aspx">Pages Manager</asp:HyperLink></li>
+            <li><asp:HyperLink ID="HyperLink8" runat="server" NavigateUrl="~/Manager/NewsManager.aspx">News Manager</asp:HyperLink></li>
+            <li><asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="~/Manager/CitiesManagement.aspx">Cities Management</asp:HyperLink></li>
+            <li><asp:HyperLink ID="HyperLink4" runat="server" NavigateUrl="~/Manager/CatgoryManager.aspx">Category Manager</asp:HyperLink></li>
+            <li><asp:HyperLink ID="HyperLink9" runat="server" NavigateUrl="~/Manager/SitesManager.aspx">Sites Manager</asp:HyperLink></li>
+            <li><asp:HyperLink ID="HyperLink5" runat="server" NavigateUrl="~/Manager/BannersManager.aspx">Banners Manager</asp:HyperLink></li>
+            <li><asp:HyperLink ID="HyperLink2" runat="server" NavigateUrl="~/Manager/ClinetsManager.aspx">User Management</asp:HyperLink></li>
+            <li><asp:HyperLink ID="HyperLink6" runat="server" NavigateUrl="~/Manager/MailingList.aspx">Mailing List</asp:HyperLink></li>
+            <li><asp:HyperLink ID="HyperLink7" runat="server" NavigateUrl="~/Manager/ClicksReport.aspx">ClicksReport</asp:HyperLink></li>
+            <li><asp:LoginStatus ID="LoginStatus2" runat="server" ForeColor="Red" /></li>
+        </ul>
+        <div id="body">
+        <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+        
+        </asp:ContentPlaceHolder>
+        </div>
+        <div id="Footer">
+           Built by <a href="http://drvvv.info">drvvv</a>
+        </div>
+    </div>
+    </form>
+</body>
+</html>

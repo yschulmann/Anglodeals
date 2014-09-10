@@ -1,0 +1,288 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="AddComment" xml:space="preserve">
+    <value>Add comment</value>
+  </data>
+  <data name="Area" xml:space="preserve">
+    <value>Area</value>
+  </data>
+  <data name="City" xml:space="preserve">
+    <value>City</value>
+  </data>
+  <data name="ContactUs" xml:space="preserve">
+    <value>Contact Us</value>
+  </data>
+  <data name="ContactUsP" xml:space="preserve">
+    <value>We’ll be happy to answer any questions you may have. We also love hearing your comments and suggestions about how to improve our website and make it easier for you to use. After all, that’s the whole point, right? We think so.</value>
+  </data>
+  <data name="Copyright" xml:space="preserve">
+    <value>Copyright © Anglo Deals 2011. All rights reserved</value>
+  </data>
+  <data name="DataTitle" xml:space="preserve">
+    <value>TitleEn</value>
+  </data>
+  <data name="DirectedNow" xml:space="preserve">
+    <value>You are now directed</value>
+  </data>
+  <data name="Discount" xml:space="preserve">
+    <value>Discount</value>
+  </data>
+  <data name="Email" xml:space="preserve">
+    <value>Email</value>
+  </data>
+  <data name="EnterEmail" xml:space="preserve">
+    <value>Enter email address</value>
+  </data>
+  <data name="Facebook" xml:space="preserve">
+    <value>&lt;iframe src="http://www.facebook.com/plugins/likebox.php?href=http%3A%2F%2Fwww.facebook.com%2Fpages%2FAnglo-Deals%2F179891768722180&amp;amp;width=230&amp;amp;colorscheme=light&amp;amp;show_faces=true&amp;amp;stream=true&amp;amp;header=true&amp;amp;height=680" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:230px; height:680px;" allowTransparency="true"&gt;&lt;/iframe&gt;</value>
+  </data>
+  <data name="FinePrint" xml:space="preserve">
+    <value>Fine print:</value>
+  </data>
+  <data name="Forum" xml:space="preserve">
+    <value>&lt;iframe src="http://snipit.co.il/forum/viewforum.php?f=1" frameborder="0" style=" height: 1175px;overflow-x: hidden;overflow-y: auto;width: 809px;"&gt; &lt;/iframe&gt;</value>
+  </data>
+  <data name="ForumDate" xml:space="preserve">
+    <value>Date</value>
+  </data>
+  <data name="ForumH1" xml:space="preserve">
+    <value>Forum</value>
+  </data>
+  <data name="ForumNew" xml:space="preserve">
+    <value>New Topic</value>
+  </data>
+  <data name="ForumReplies" xml:space="preserve">
+    <value>Replies</value>
+  </data>
+  <data name="ForumTopics" xml:space="preserve">
+    <value>Topics</value>
+  </data>
+  <data name="ForumViews" xml:space="preserve">
+    <value>Views</value>
+  </data>
+  <data name="FoundOn" xml:space="preserve">
+    <value>Found on</value>
+  </data>
+  <data name="GoogleAnalytics" xml:space="preserve">
+    <value>&lt;script type="text/javascript"&gt;
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-21956328-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+&lt;/script&gt;</value>
+  </data>
+  <data name="HelpFor" xml:space="preserve">
+    <value>English help for </value>
+  </data>
+  <data name="InvalidEmail" xml:space="preserve">
+    <value>Invalid email address</value>
+  </data>
+  <data name="LabelSearch" xml:space="preserve">
+    <value>Keyword e.g. hotel, Canela etc. (English/Hebrew)</value>
+  </data>
+  <data name="LoadingCities" xml:space="preserve">
+    <value>[Loading Cities...]</value>
+  </data>
+  <data name="Mehadrin" xml:space="preserve">
+    <value>Mehadrin only</value>
+  </data>
+  <data name="MenuCods" xml:space="preserve">
+    <value>&lt;span&gt;ON-LINE SHOPPING &lt;/span&gt;CODES</value>
+  </data>
+  <data name="MenuDd" xml:space="preserve">
+    <value>DEALS</value>
+  </data>
+  <data name="MenuForum" xml:space="preserve">
+    <value>ANGLO DEALS &lt;span&gt;FORUM&lt;/span&gt;</value>
+  </data>
+  <data name="MenuFp" xml:space="preserve">
+    <value>&lt;span&gt;FREE PRINTABLE &lt;/span&gt;COUPONS</value>
+  </data>
+  <data name="MessageEmpty" xml:space="preserve">
+    <value>What did you write?</value>
+  </data>
+  <data name="Name" xml:space="preserve">
+    <value>Name</value>
+  </data>
+  <data name="NoData" xml:space="preserve">
+    <value>No data was returned.</value>
+  </data>
+  <data name="Phone" xml:space="preserve">
+    <value>Phone</value>
+  </data>
+  <data name="PopUpNoThanks" xml:space="preserve">
+    <value>No thanks, I'm already registered</value>
+  </data>
+  <data name="PrintCoupon" xml:space="preserve">
+    <value>Print Coupon</value>
+  </data>
+  <data name="PublicNot" xml:space="preserve">
+    <value>(Will not be published)</value>
+  </data>
+  <data name="Select" xml:space="preserve">
+    <value>Select</value>
+  </data>
+  <data name="SelectArea" xml:space="preserve">
+    <value>-Select Area-</value>
+  </data>
+  <data name="SelectCategory" xml:space="preserve">
+    <value>-Select Category-</value>
+  </data>
+  <data name="SelectCity" xml:space="preserve">
+    <value>-Select City-</value>
+  </data>
+  <data name="Send" xml:space="preserve">
+    <value>Send</value>
+  </data>
+  <data name="SignUp" xml:space="preserve">
+    <value>Sign up for daily email</value>
+  </data>
+  <data name="SortByCategory" xml:space="preserve">
+    <value>Sort by category</value>
+  </data>
+  <data name="SortByCity" xml:space="preserve">
+    <value>Sort by city</value>
+  </data>
+  <data name="Subject" xml:space="preserve">
+    <value>Subject</value>
+  </data>
+  <data name="TextBoxSearch" xml:space="preserve">
+    <value>Search all Deals and Coupons</value>
+  </data>
+  <data name="Title" xml:space="preserve">
+    <value>Title</value>
+  </data>
+  <data name="ViewAll" xml:space="preserve">
+    <value>View All</value>
+  </data>
+  <data name="Worth" xml:space="preserve">
+    <value>Worth</value>
+  </data>
+  <data name="YouSave" xml:space="preserve">
+    <value>You save</value>
+  </data>
+</root>

@@ -1,0 +1,56 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Jerusalem Cuisine</title>
+    <style type="text/css">
+    .body
+    {
+    	width:900px;
+    	margin:12px auto;
+    	height:750px;
+    	background:url("images/minisite_jerusalem_cousine.jpg") no-repeat scroll 0 0 transparent;
+    	position:relative;
+    }
+    form input[type=text]
+    {
+    	background:none;
+    	width:228px;
+    	position:absolute;
+    	top:575px;
+    	border:none;
+    }
+    .checkbox
+    {
+    	left: 225px;
+        position: absolute;
+        top: 623px;
+    }
+    .submit1
+    {
+    	background: none repeat scroll 0 0 transparent;
+        border: medium none;
+        cursor: pointer;
+        height: 50px;
+        left: 400px;
+        position: absolute;
+        top: 650px;
+        width: 130px;
+    }
+    </style>
+</head>
+<body>
+    <div class="body">
+        <form name='Newsletter' method='get' action='http://www.drvvv.info//Newsletter/AddToNewsletter.aspx'>
+            <input type='hidden' name='ListsId' value='29' />
+            
+            <input type='text' name='FirstName' style="left:75px" />
+            <input type='text' name='Phone' style="left:335px" />
+            <input type='text' name='Email' style="left:595px" />
+            <input type='checkbox' name='SelectFree' checked="checked" class="checkbox" /> 
+            
+            <input type='submit' name='submit1' value='' class="submit1" /> 
+        </form>
+    </div>
+</body>
+</html>
